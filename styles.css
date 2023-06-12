@@ -159,5 +159,84 @@ img {
   margin-bottom: 5.5rem;
 }
 .home__parterns-logo {
-  width: 56px;
+  width: 45px;
+  object-fit: contain;
+}
+.benefits__linetime {
+  margin-bottom: 2rem;
+}
+.benefits__list-description {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4.2rem;
+}
+.benefits__item {
+  border-bottom: 1px solid #f0ebfa;
+  padding: 1rem 2rem;
+}
+.benefits__title {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--title-color);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.8rem;
+}
+.benefits__description {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
+  line-height: 18px;
+}
+.benefits__item:first-of-type {
+  background-color: #f6f3fc;
+  border: 1px dashed #f0ebfa;
+  border-bottom: 10px solid #794cff;
+}
+.services__container {
+  text-align: center;
+  margin-bottom: 5.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.services__container-title {
+  color: var(--title-color);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 18px;
+  margin-bottom: 0.5rem;
+}
+.services__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.services__card {
+  padding: 1rem 2rem;
+}
+.services__title {
+  color: var(--title-color);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 18px;
+  margin-bottom: 0.5rem;
+}
+.services__description {
+  color: var(--title-color);
+  font-size: 1rem;
+  font-weight: --font-weight-regular;
+  line-height: 18px;
+}
+.services__btn-more-services {
+  width: 85%;
+  align-self: center;
+  height: 3.2rem;
+  background: #ece5ff;
+  color: #7259fa;
+  border: none;
+  border-radius: 4px;
+  border: 1px solid #ece5ff;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
 }
