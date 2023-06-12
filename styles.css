@@ -2,7 +2,6 @@
   --title-color: #35414b;
   --text-color: #4e5a65;
   /*========== Font and typography ==========*/
-
   --font-family: 'Inter', sans-serif;
   --section-title-size: 1.12rem;
   --font-weight-regular: 400;
@@ -172,7 +171,7 @@ img {
 }
 .benefits__item {
   border-bottom: 1px solid #f0ebfa;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2.5rem;
 }
 .benefits__title {
   text-align: center;
@@ -204,12 +203,13 @@ img {
   font-size: 1rem;
   font-weight: var(--font-weight-bold);
   line-height: 18px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .services__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
 }
 .services__card {
   padding: 1rem 2rem;
@@ -225,7 +225,7 @@ img {
   color: var(--title-color);
   font-size: 1rem;
   font-weight: --font-weight-regular;
-  line-height: 18px;
+  line-height: 20px;
 }
 .services__btn-more-services {
   width: 85%;
@@ -239,4 +239,20 @@ img {
   margin-top: 1rem;
   font-size: 1rem;
   font-weight: var(--font-weight-medium);
+}
+.services__icon {
+  
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1rem;
+  border: 1px solid #FEF6EE;
+}
+.services__img {
+  height: 1rem;
+  width: 1rem;
 }
