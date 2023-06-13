@@ -317,8 +317,8 @@ img {
 }
 /* .testimonials__user-container {
 } */
-.testimonials__user-photo{
-  margin-bottom: .55rem;
+.testimonials__user-photo {
+  margin-bottom: 0.55rem;
 }
 .testimonials__user-name {
   font-size: 0.8rem;
@@ -326,11 +326,31 @@ img {
   font-weight: var(--font-weight-bold);
   line-height: 13px;
   margin-bottom: 3px;
-
 }
 .testimonials__user-role {
   font-weight: var(--font-weight-regular);
   line-height: 13px;
   font-size: 0.8rem;
   color: var(--text-color);
+}
+/* ********** PROMOTIONS ************** */
+.promotion__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 3.5rem;
+  align-items: center;
+  background: #796EFF;
+  padding: 2.2rem 3rem;
+}
+.promotion__title{
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  line-height: 2rem;
+  font-weight: var(--font-weight-bold);
+}
+.promotion__img:first-of-type {
+  width: 11.3rem;
+  margin-bottom: 1.5rem;
 }
