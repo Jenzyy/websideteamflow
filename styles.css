@@ -52,6 +52,7 @@ img {
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 2rem 0.9rem 0;
 }
 .nav__logo {
@@ -65,20 +66,13 @@ img {
   min-width: 77px;
   min-height: 20px;
   color: #1d2830;
+  vertical-align: center;
 }
 
-/* Open Menu */
-
-/************* Mobile **************/
+/*************** Side Menú ***************/
 @media screen and (max-width: 763px) {
   .nav__buttons {
     display: none;
-  }
-  .nav__menu {
-    padding: 3rem 0.9rem 0;
-    box-shadow: 19px -14px 40px -18px rgba(255, 255, 255, 0.593) inset;
-    -webkit-box-shadow: 19px -14px 40px -18px rgba(255, 255, 255, 0.593) inset;
-    -moz-box-shadow: 19px -14px 40px -18px rgba(255, 255, 255, 0.593) inset;
   }
   .nav__menu {
     position: fixed;
@@ -89,6 +83,10 @@ img {
     height: 100%;
     z-index: 1000;
     transition: 0.5s ease;
+    padding: 3rem 0.9rem 0;
+    box-shadow: 19px -14px 40px -18px rgba(255, 255, 255, 0.593) inset;
+    -webkit-box-shadow: 19px -14px 40px -18px rgba(255, 255, 255, 0.593) inset;
+    -moz-box-shadow: 19px -14px 40px -18px rgba(255, 255, 255, 0.593) inset;
   }
   .nav__list {
     margin-top: 3rem;
@@ -102,6 +100,7 @@ img {
     margin-bottom: 2rem;
   }
 }
+
 .open--menu {
   right: 0;
 }
@@ -110,7 +109,8 @@ img {
   padding: 0 1.5rem;
 }
 .nav__link {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  color: var(--title-color);
 }
 .nav__close {
   top: 2rem;
@@ -133,12 +133,15 @@ img {
 .main {
   padding: 1px;
 }
-/* ************** HOME ******************* */
 
+/* ***************** HOME ******************* */
 .home__container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   padding-top: 6rem;
   justify-content: center;
+  align-items: center;
+
 }
 .home__price-service {
   text-align: center;
@@ -154,37 +157,46 @@ img {
   margin: 0 2.3rem;
   text-align: center;
   margin-bottom: 1.3rem;
-  transition: 0.7s ease;
+  transition: 1s ease;
 }
 .home__description {
-  margin: 0 2.3rem;
+  margin: 0 2.6rem;
   font-size: 0.9rem;
   color: var(--title-color);
   font-weight: var(--font-weight-regular);
   line-height: 19px;
   text-align: justify;
   margin-bottom: 1.3rem;
+  max-width: 705px;
+  transition: 0.3s ease;
 }
 .home__input-correo {
-  margin: 0 2.3rem;
+  outline: none;
   border: 1px solid #e1e5ea;
-  min-height: 3.52rem;
-  margin-bottom: 0.5rem;
+  min-height: 3rem;
   border-radius: 4px;
   text-align: center;
+  flex-grow: 2;
+  width: 100%;
 }
 .home__input-correo::placeholder {
   text-align: center;
   color: #97a5b5;
 }
+.home__container-form {
+  padding: 0 2.3rem;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 420px;
+}
 .home__button {
-  min-height: 3.52rem;
   color: #ffffff;
   background-color: #794cff;
   border: 1px solid #794cff;
   border-radius: 4px;
-  margin: 0 2.3rem;
-  margin-bottom: 2rem;
+  min-height: 3rem;
+  width: 100%;
 }
 .home_description-service {
   margin-bottom: 3.5rem;
@@ -209,6 +221,8 @@ img {
   width: 45px;
   object-fit: contain;
 }
+
+/* ********* SECTION: Benefits */
 .benefits__linetime {
   margin-bottom: 2rem;
 }
@@ -257,10 +271,12 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: 0.9s ease;
   gap: 1rem;
 }
 .services__card {
   padding: 1rem 2rem;
+  text-align: center;
 }
 .services__title {
   color: var(--title-color);
@@ -294,9 +310,10 @@ img {
   height: 30px;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
+  text-align: center;
   align-items: center;
-  margin: 0 auto 1rem;
+  margin: 1rem auto 0;
+
   border: 1px solid #fef6ee;
 }
 .services__img {
@@ -403,7 +420,6 @@ img {
   margin-bottom: 1.5rem;
 }
 /* *************** FOOTER ******************** */
-
 .footer {
   margin: 0;
   background: #1d2830;
@@ -437,7 +453,7 @@ img {
 }
 .footer__img {
   margin: 0.4rem 0;
-  width: 65%;
+  width: 11rem;
   height: auto;
 }
 .footer__content-copyright-social {
@@ -451,29 +467,8 @@ img {
   color: #d9dbe1;
   line-height: 14px;
 }
-/* DIVICE -> TABLET */
+/********************** DEVICE -> TABLET ***********************/
 @media screen and (min-width: 764px) {
-  .container {
-    max-width: 1000px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .nav__menu-icon {
-    display: none;
-  }
-  .nav {
-    padding: 0 5rem;
-  }
-  .nav__list {
-    flex-direction: row;
-    display: flex;
-  }
-  .nav__button-free-access,
-  .nav__close {
-    display: none;
-  }
-
   .home__container,
   .home__parterns,
   .benefits__container,
@@ -484,19 +479,83 @@ img {
     padding-right: 3rem;
     padding-left: 3rem;
   }
+  .services__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+  }
+  .services__card {
+    text-align: start;
+  }
+  .services__icon {
+    margin: 1rem 0;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  /* *** Navbar **** */
+  .nav__menu-icon {
+    display: none;
+  }
+  .header {
+    position: fixed;
+    background-color: white;
+    z-index: 9999;
+    padding-bottom: 2rem;
+    width: 100%;
+  }
+  .nav__button-login {
+    color: var(--title-color);
+  }
+  .nav {
+    padding: 0 5rem;
+    align-items: baseline;
+  }
+  .nav__list {
+    flex-direction: row;
+    display: flex;
+  }
+  .nav .nav__button-free-access,
+  .nav__close {
+    display: none;
+  }
+
+  /* *** Home *** */
+  .home__price-service {
+    font-size: 0.9rem;
+    padding-top: 3rem;
+  }
   .home__title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    padding: 0 2.8rem;
   }
   .home__description {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
+    padding: 0 2.8rem;
+  }
+
+  .home__container-form {
+    display: flex;
+    flex-direction: row;
+  }
+  .home__button {
+    width: 40%;
   }
   /* *** Foooter */
 
-  .footer__title-option{
-    font-size: 1.5rem;
+  .footer__title-option {
+    font-size: 1.1rem;
   }
   .footer__img {
-    width: 17rem;
+    width: 11rem;
+  }
+  .home__parterns-logo {
+    width: auto;
+  }
+  .home__parterns-title {
+    margin-bottom: 3rem;
   }
 }
