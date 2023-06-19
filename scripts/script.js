@@ -12,3 +12,12 @@ function toggleMenu() {
   }
   navMenu.classList.add('open--menu');
 }
+
+const navbar = document.querySelector('.header')
+window.addEventListener('scroll',()=>{
+  if (window.scrollY > 0) {
+    navbar.classList.add("header--scroll");
+  } else {
+    navbar.classList.remove("header--scroll");
+  }
+})

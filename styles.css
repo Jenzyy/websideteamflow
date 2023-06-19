@@ -49,11 +49,22 @@ img {
   font-family: var(--font-family);
 }
 /* **************** HEADER ***************** */
+.header {
+  position: fixed;
+  background-color: white;
+  z-index: 9999;
+  padding: 1.9rem 0;
+  width: 100%;
+  transition: 0.5s ease;
+}
+.header--scroll {
+  padding: 1rem 0;
+}
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem 0.9rem 0;
+  margin: 0 0.9rem 0;
 }
 .nav__logo {
   display: inline-block;
@@ -138,16 +149,16 @@ img {
 .home__container {
   display: flex;
   flex-direction: column;
-  padding-top: 6rem;
+  padding-top: 8rem;
   justify-content: center;
   align-items: center;
-
 }
 .home__price-service {
   text-align: center;
   font-size: 13px;
   font-weight: var(--font-weight-regular);
   line-height: 13px;
+
   margin-bottom: 1.3rem;
   color: var(--title-color);
 }
@@ -158,6 +169,7 @@ img {
   text-align: center;
   margin-bottom: 1.3rem;
   transition: 1s ease;
+  max-width: 800px;
 }
 .home__description {
   margin: 0 2.6rem;
@@ -225,7 +237,10 @@ img {
 /* ********* SECTION: Benefits */
 .benefits__linetime {
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
 }
+
 .benefits__list-description {
   display: flex;
   flex-direction: column;
@@ -372,6 +387,7 @@ img {
   list-style: 1.2rem;
   padding: 0 2rem 1rem;
   margin-bottom: 1.5rem;
+  color: var(--title-color);
 }
 .testimonial__description {
   font-weight: var(--font-weight-regular);
@@ -470,7 +486,6 @@ img {
 /********************** DEVICE -> TABLET ***********************/
 @media screen and (min-width: 764px) {
   .home__container,
-  .home__parterns,
   .benefits__container,
   .services__container,
   .workflow__container,
@@ -479,10 +494,24 @@ img {
     padding-right: 3rem;
     padding-left: 3rem;
   }
+  .home__container {
+    padding-top: 5rem;
+  }
+  .header {
+    padding: 2.7rem 0;
+  }
+  .header--scroll {
+    padding: 1.5rem 0;
+  }
+  .home__parterns,
+  .home_description-service {
+    padding: 0 6rem;
+  }
   .services__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 20rem);
+    grid-template-columns: repeat(2, 1fr);
   }
+
   .services__card {
     text-align: start;
   }
@@ -499,13 +528,7 @@ img {
   .nav__menu-icon {
     display: none;
   }
-  .header {
-    position: fixed;
-    background-color: white;
-    z-index: 9999;
-    padding-bottom: 2rem;
-    width: 100%;
-  }
+
   .nav__button-login {
     color: var(--title-color);
   }
@@ -525,7 +548,7 @@ img {
   /* *** Home *** */
   .home__price-service {
     font-size: 0.9rem;
-    padding-top: 3rem;
+    padding-top: 6rem;
   }
   .home__title {
     font-size: 2.8rem;
@@ -557,5 +580,152 @@ img {
   }
   .home__parterns-title {
     margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .container {
+    max-width: 1200px;
+  }
+  .home__title {
+    font-size: 3.2rem;
+  }
+  .home__description {
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 24px;
+  }
+  .nav__link {
+    font-size: 1rem;
+  }
+  .home__parterns-title {
+    font-size: 1rem;
+  }
+  .benefits__container {
+    display: flex;
+    column-gap: 6rem;
+    margin-bottom: 6rem;
+  }
+  .benefits__list-description {
+    width: 35%;
+  }
+  .benefits__item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    border-left: 2px solid #f0ebfa;
+    padding: 1.7rem 1rem;
+  }
+  .benefits__item:first-of-type {
+    border: 1px dashed #f0ebfa;
+    border-left: 10px solid #794cff;
+  }
+  .benefits__description {
+    text-align: start;
+    font-size: 0.9rem;
+  }
+  .benefits__linetime img {
+    max-height: 519px;
+  }
+  .home__parterns-container-logos {
+    padding-bottom: 5.5rem;
+  }
+
+  /* Services */
+  .services__container {
+    margin-bottom: 8rem;
+  }
+  .services__container-title {
+    font-size: 2.3rem;
+    margin-bottom: 4rem;
+  }
+  .services__list {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+  }
+  .services__img {
+    height: auto;
+    width: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .services__description {
+    font-size: 0.8rem;
+  }
+  .services__btn-more-services {
+    display: none;
+  }
+  .workflow__card {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+  .workflow__container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 3rem;
+    margin-bottom: 9rem;
+  }
+  .workflow__title {
+    font-size: 2.3rem;
+    line-height: 48px;
+    padding: 1.5rem 3rem 1.5rem 0;
+  }
+  .workflow__desription {
+    text-align: start;
+    margin-bottom: 2rem;
+  }
+  .workflow__img {
+    height: auto;
+    max-width: 550px;
+  }
+  .workflow__btn {
+    max-width: 35%;
+    align-self: flex-start;
+  }
+  /* ** TESMIMONIALS */
+  .testimonials__title {
+    font-size: 2.3rem;
+    padding: 0 20rem 1rem;
+  }
+  .testimonial__description {
+    padding: 0 15rem 1rem;
+  }
+  .promotion__container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    margin: 2rem auto;
+    border-radius: 16px;
+    align-items: center;
+    column-gap: 2rem;
+    padding: 4rem;
+  }
+  .promotion__title {
+    align-self: center;
+    padding-right: 4rem;
+    margin-bottom: 0;
+    text-align: start;
+    font-size: 1.6rem;
+    line-height: 48px;
+  }
+  .promotion__img:first-of-type {
+    margin-bottom: 0;
+  }
+
+  /* ****** FOOTER************* */
+    
+  .footer__content-copyright-social,
+  .footer__container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .footer__options-container{
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .footer__content-copyright-social{
+    padding-left: 0;
   }
 }
