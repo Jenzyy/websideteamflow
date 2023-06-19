@@ -79,6 +79,9 @@ img {
   color: #1d2830;
   vertical-align: center;
 }
+.home__container-discount{
+  margin-bottom: 0.7rem;
+}
 
 /*************** Side Menú ***************/
 @media screen and (max-width: 763px) {
@@ -109,6 +112,9 @@ img {
   }
   .nav__item {
     margin-bottom: 2rem;
+  }
+  .home__discount-price{
+    display: none;
   }
 }
 
@@ -158,10 +164,9 @@ img {
   font-size: 13px;
   font-weight: var(--font-weight-regular);
   line-height: 13px;
-
-  margin-bottom: 1.3rem;
   color: var(--title-color);
 }
+
 .home__title {
   font-size: 2rem;
   color: var(--title-color);
@@ -200,7 +205,7 @@ img {
   flex-direction: column;
   margin-bottom: 2rem;
   width: 100%;
-  max-width: 420px;
+  max-width: 31.2rem;
 }
 .home__button {
   color: #ffffff;
@@ -548,7 +553,22 @@ img {
   /* *** Home *** */
   .home__price-service {
     font-size: 0.9rem;
-    padding-top: 6rem;
+    
+  }
+  .home__container-discount{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    column-gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .home__discount-price{
+    background-color: #81C43B;
+    color: #FFFFFF;
+    border-radius: 100px;
+    padding: 0.3rem 0.5rem;
+    
   }
   .home__title {
     font-size: 2.8rem;
@@ -732,7 +752,7 @@ img {
 /* ***** small devices */
 @media screen and (max-width: 360px){
 .home__title{
-  margin: 1rem 1.3rem;
+  margin:0 1.3rem 1rem;
 }
 .home__description{
   margin: 0.5rem 1.3rem;
